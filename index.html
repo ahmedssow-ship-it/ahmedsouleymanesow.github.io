@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahmed Souleymane SOW – Data Science</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── LISIBILITÉ GLOBALE ── */
+    body {
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+
+    /* Paragraphes et textes courants */
+    p, .about-text p, .stage-info p, .tl-desc, .certif-date {
+      color: #d4d0c8 !important;
+      font-size: 1rem !important;
+      line-height: 1.8 !important;
+    }
+
+    /* Titres de sections */
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem) !important;
+      color: #f0ede6 !important;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+    }
+    .section-title span {
+      color: #7eb3ff !important;
+    }
+
+    /* Labels de section */
+    .section-label {
+      font-size: 0.78rem !important;
+      letter-spacing: 0.15em !important;
+      color: #7eb3ff !important;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Hero */
+    .hero-name {
+      font-size: clamp(2rem, 5vw, 3.8rem) !important;
+      color: #ffffff !important;
+      line-height: 1.0 !important;
+      letter-spacing: -0.03em !important;
+    }
+    .hero-name span {
+      color: #7eb3ff !important;
+    }
+    .hero-sub {
+      font-size: 1.1rem !important;
+      color: #c8c4bc !important;
+      line-height: 1.8 !important;
+      max-width: 540px;
+    }
+    .hero-tag {
+      font-size: 0.8rem !important;
+      color: #a8c4f0 !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    /* À propos */
+    .about-text p {
+      font-size: 1.02rem !important;
+      color: #ccc8c0 !important;
+      margin-bottom: 1.1rem;
+    }
+    .about-text strong, .about-text .hl {
+      color: #f0ede6 !important;
+    }
+
+    /* Stats */
+    .stat-num {
+      font-size: 2rem !important;
+      color: #7eb3ff !important;
+      font-weight: 800;
+    }
+    .stat-label {
+      font-size: 0.8rem !important;
+      color: #a8a4a0 !important;
+      letter-spacing: 0.05em;
+    }
+
+    /* Timeline */
+    .tl-date {
+      font-size: 0.78rem !important;
+      color: #7eb3ff !important;
+      letter-spacing: 0.08em !important;
+      font-weight: 600;
+    }
+    .tl-title {
+      font-size: 1.05rem !important;
+      color: #f0ede6 !important;
+      font-weight: 700;
+      margin: 0.3rem 0;
+    }
+    .tl-sub {
+      font-size: 0.88rem !important;
+      color: #9a9690 !important;
+      margin-bottom: 0.5rem;
+    }
+    .tl-desc {
+      font-size: 0.92rem !important;
+      color: #c0bcb4 !important;
+    }
+
+    /* Stage card */
+    .stage-info h3 {
+      font-size: 1.1rem !important;
+      color: #f0ede6 !important;
+    }
+    .stage-meta {
+      font-size: 0.8rem !important;
+      color: #7eb3ff !important;
+      letter-spacing: 0.05em;
+      margin: 0.3rem 0 0.75rem;
+    }
+
+    /* Skills */
+    .skill-card h3 {
+      font-size: 1rem !important;
+      color: #f0ede6 !important;
+      font-weight: 700;
+    }
+
+    /* Barres de compétences */
+    .bar-top span:first-child {
+      font-size: 0.9rem !important;
+      color: #d4d0c8 !important;
+    }
+    .bar-top span:last-child {
+      font-size: 0.82rem !important;
+      color: #7eb3ff !important;
+      font-weight: 600;
+    }
+
+    /* Projets */
+    .project-card h3 {
+      font-size: 1.05rem !important;
+      color: #f0ede6 !important;
+      font-weight: 700;
+    }
+    .project-card p {
+      font-size: 0.92rem !important;
+      color: #c0bcb4 !important;
+      line-height: 1.7 !important;
+    }
+    .project-num {
+      color: #7eb3ff !important;
+      opacity: 0.6;
+    }
+
+    /* Certifications */
+    .certif-body h3 {
+      font-size: 0.98rem !important;
+      color: #f0ede6 !important;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .certif-issuer {
+      font-size: 0.78rem !important;
+      color: #9a9690 !important;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+    .certif-date {
+      font-size: 0.78rem !important;
+      color: #9a9690 !important;
+    }
+    .certif-link {
+      font-size: 0.8rem !important;
+      color: #7eb3ff !important;
+    }
+
+    /* Contact */
+    .contact-inner p {
+      font-size: 1.05rem !important;
+      color: #c8c4bc !important;
+      line-height: 1.8 !important;
+      margin-bottom: 2rem;
+    }
+    .contact-link {
+      font-size: 0.9rem !important;
+    }
+
+    /* Footer */
+    footer {
+      font-size: 0.82rem !important;
+      color: #6a6860 !important;
+      letter-spacing: 0.05em;
+    }
+
+    /* Nav */
+    .nav-logo {
+      font-size: 1rem !important;
+      color: #7eb3ff !important;
+      font-weight: 600;
+    }
+    .nav-links a {
+      font-size: 0.85rem !important;
+      color: #c0bcb4 !important;
+      letter-spacing: 0.03em;
+    }
+    .nav-links a:hover {
+      color: #7eb3ff !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAV
+═══════════════════════════════ -->
+<nav>
+  <div class="nav-logo">// ahmed.s.sow</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#parcours">Background</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+
+  <!-- Texte -->
+  <div class="hero-tag">Master Data Science · AIMS Senegal · 2025 – 2027</div>
+  <h1 class="hero-name">Ahmed Souleymane<br /><span>SOW</span></h1>
+  <p class="hero-sub">
+    Passionate about Machine Learning, Deep Learning, Computer Vision and Natural Language Processing.
+    Aspiring NLP researcher — building intelligent systems that understand human language.
+  </p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn btn-primary">View my projects</a>
+    <a href="mailto:ahmed.s.sow@aims-senegal.org" class="btn btn-outline">Contact me</a>
+  </div>
+
+  <!-- Photo -->
+  <div class="hero-photo-wrap">
+    <div class="hero-photo-ring"></div>
+    <div class="hero-photo-ring2"></div>
+    <img
+      src="images/photo.jpg"
+      alt="Ahmed Souleymane SOW"
+      class="hero-photo"
+    />
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     ABOUT
+═══════════════════════════════ -->
+<section id="about">
+  <div class="section-label">01 / About</div>
+  <h2 class="section-title">Who <span>am I?</span></h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>
+        Master's student in Data Science at the <strong>African Institute for Mathematical Sciences (AIMS-Senegal)</strong>,
+        with a strong background in mathematics and applications from Alioune Diop University of Bambey.
+      </p>
+      <p>
+        My work spans <strong class="hl">machine learning</strong>, <strong class="hl">deep learning</strong>
+        and <strong class="hl">computer vision</strong> — with a growing focus on
+        <strong class="hl">Natural Language Processing (NLP)</strong>.
+        I am deeply interested in how language models understand and generate human language,
+        and I aspire to pursue research in NLP, particularly on low-resource African languages
+        such as Wolof and Pulaar.
+      </p>
+      <p>
+        As a multilingual speaker (French, English, Wolof), I see NLP not just as a technical challenge
+        but as a way to make AI more inclusive and representative of African linguistic diversity.
+        My long-term goal is to contribute to academic research at the intersection of
+        <strong class="hl">deep learning</strong> and <strong class="hl">language understanding</strong>.
+      </p>
+      <p>
+        Based in Sandiara / Mbour, Senegal. Always curious, always learning.
+      </p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-card">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">GitHub projects published</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Certifications earned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Internship completed (Codveda)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">AIMS</div>
+        <div class="stat-label">Institute of excellence</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Kaggle</div>
+        <div class="stat-label">Active competitor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     BACKGROUND
+═══════════════════════════════ -->
+<section id="parcours">
+  <div class="section-label">02 / Background</div>
+  <h2 class="section-title">Education & <span>Experience</span></h2>
+
+  <!-- Internship -->
+  <div class="stage-card reveal">
+    <div class="stage-logo">🏢</div>
+    <div class="stage-info">
+      <h3>Data Science Intern — Codveda Technologies</h3>
+      <div class="stage-meta">March 2026 → April 2026 · ID: CV/A1/63779</div>
+      <p>
+        Certified internship at Codveda Technologies (ISO 9001:2015). Demonstrated strong Data Science skills,
+        effective communication and exceptional attention to detail.
+        High ability to learn quickly and adapt to new challenges.
+      </p>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-date">2025 – 2027 (ongoing)</div>
+      <div class="tl-title">Master of Science in Mathematical Sciences – Data Science</div>
+      <div class="tl-sub">African Institute for Mathematical Sciences (AIMS), Senegal</div>
+      <div class="tl-desc">Deep Learning, Advanced Machine Learning, Computer Vision, applied research projects.</div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-date">2024 – 2025</div>
+      <div class="tl-title">Master 1 in Mathematics and Applications</div>
+      <div class="tl-sub">Alioune Diop University of Bambey (UADB), Senegal</div>
+      <div class="tl-desc">Analysis, algebra, probability and advanced statistics.</div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-date">2022 – 2023</div>
+      <div class="tl-title">Bachelor's Degree in Mathematics</div>
+      <div class="tl-sub">Alioune Diop University of Bambey (UADB), Senegal</div>
+      <div class="tl-desc">Solid mathematical foundations: analysis, linear algebra, probability.</div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-date">2018 – 2019</div>
+      <div class="tl-title">High School Diploma – Series S2</div>
+      <div class="tl-sub">Lycée de Sandiara, Senegal</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     SKILLS
+═══════════════════════════════ -->
+<section id="skills">
+  <div class="section-label">03 / Skills</div>
+  <h2 class="section-title">My <span>stack</span></h2>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">🧠</div>
+      <h3>Deep Learning & ML</h3>
+      <div class="skill-tags">
+        <span class="tag b">PyTorch</span>
+        <span class="tag b">CNN</span>
+        <span class="tag b">scikit-learn</span>
+        <span class="tag b">Regression</span>
+        <span class="tag b">Classification</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">💬</div>
+      <h3>NLP & Language Models</h3>
+      <div class="skill-tags">
+        <span class="tag b">Transformers</span>
+        <span class="tag b">HuggingFace</span>
+        <span class="tag b">Text Classification</span>
+        <span class="tag b">Tokenization</span>
+        <span class="tag b">Low-resource NLP</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">📊</div>
+      <h3>Analysis & Visualisation</h3>
+      <div class="skill-tags">
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🗄️</div>
+      <h3>Data & Tools</h3>
+      <div class="skill-tags">
+        <span class="tag g">Python</span>
+        <span class="tag g">SQL / MySQL</span>
+        <span class="tag g">Streamlit</span>
+        <span class="tag g">Git / GitHub</span>
+        <span class="tag g">Jupyter</span>
+        <span class="tag g">Kaggle</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skill bars -->
+  <div style="max-width: 560px;" class="reveal">
+    <div class="bar-group">
+      <div class="bar-top"><span>Python / Pandas</span><span>90%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--w:90%; --d:.1s"></div></div>
+    </div>
+    <div class="bar-group">
+      <div class="bar-top"><span>Deep Learning (CNN / PyTorch)</span><span>82%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--w:82%; --d:.25s"></div></div>
+    </div>
+    <div class="bar-group">
+      <div class="bar-top"><span>Machine Learning (scikit-learn)</span><span>80%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--w:80%; --d:.4s"></div></div>
+    </div>
+    <div class="bar-group">
+      <div class="bar-top"><span>SQL / Databases</span><span>72%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--w:72%; --d:.55s"></div></div>
+    </div>
+    <div class="bar-group">
+      <div class="bar-top"><span>Computer Vision</span><span>75%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--w:75%; --d:.7s"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     PROJECTS
+═══════════════════════════════ -->
+<section id="projects">
+  <div class="section-label">04 / Projects</div>
+  <h2 class="section-title">What I've <span>built</span></h2>
+  <div class="projects-grid">
+
+    <div class="project-card reveal">
+      <div class="project-num">001</div>
+      <h3>Road Traffic Counting & Tracking</h3>
+      <p>Real-time road traffic counting and vehicle tracking system using computer vision. Object detection and tracking on video streams.</p>
+      <div class="project-footer">
+        <div class="skill-tags">
+          <span class="tag b">Computer Vision</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag g">OpenCV</span>
+        </div>
+        <div class="project-links">
+          <a href="https://huggingface.co/spaces/AhmedSouley01/traffic-monitoring" target="_blank" class="project-link demo-link">🚀 Demo</a>
+          <a href="https://github.com/ahmedssow-ship-it/Computer_vision_Road-traffic-counting-and-tracking" target="_blank" class="project-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-num">002</div>
+      <h3>Intel Image Classification</h3>
+      <p>Classification of natural scene images (mountain, sea, forest, building…) using CNN — PyTorch and TensorFlow versions. App deployed on Streamlit.</p>
+      <div class="project-footer">
+        <div class="skill-tags">
+          <span class="tag b">CNN</span>
+          <span class="tag b">PyTorch</span>
+          <span class="tag b">TensorFlow</span>
+        </div>
+        <div class="project-links">
+          <a href="https://computervisionintel-image-classification-btdnpkj8jy3auu8q2teag.streamlit.app/" target="_blank" class="project-link demo-link">🚀 Demo</a>
+          <a href="https://github.com/ahmedssow-ship-it/Computer_vision_Intel-Image-Classification" target="_blank" class="project-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-num">003</div>
+      <h3>Food Image Recognition</h3>
+      <p>Automatic recognition of African and international dishes using deep learning techniques and data augmentation.</p>
+      <div class="project-footer">
+        <div class="skill-tags">
+          <span class="tag b">CNN</span>
+          <span class="tag">Data Augmentation</span>
+          <span class="tag g">Pandas</span>
+        </div>
+        <a href="https://github.com/ahmedssow-ship-it/Food-Image-Recognition" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-num">004</div>
+      <h3>Image Classification CNN – CIFAR-10</h3>
+      <p>Multi-class classification on CIFAR-10 with CNN from scratch. Hyperparameter tuning, data augmentation and performance analysis.</p>
+      <div class="project-footer">
+        <div class="skill-tags">
+          <span class="tag b">PyTorch</span>
+          <span class="tag b">CIFAR-10</span>
+          <span class="tag">Matplotlib</span>
+        </div>
+        <a href="https://github.com/ahmedssow-ship-it/Image-classification-using-CNN-CIFAR-10-" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-num">005</div>
+      <h3>Deep Learning Challenge – DermAI</h3>
+      <p>Skin lesion classification as part of an academic challenge. Evaluated by accuracy and F1 score, with fine-tuning of pre-trained models.</p>
+      <div class="project-footer">
+        <div class="skill-tags">
+          <span class="tag b">PyTorch</span>
+          <span class="tag">F1 Score</span>
+          <span class="tag">Fine-tuning</span>
+        </div>
+        <a href="https://github.com/ahmedssow-ship-it/Deep_learnig_Challenge" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-num">006</div>
+      <h3>Data Mining Project</h3>
+      <p>End-to-end data mining project: preprocessing, exploration, clustering and predictive modelling on a real dataset. Detailed result visualisations.</p>
+      <div class="project-footer">
+        <div class="skill-tags">
+          <span class="tag g">Pandas</span>
+          <span class="tag g">scikit-learn</span>
+          <span class="tag">Seaborn</span>
+        </div>
+        <a href="https://github.com/ahmedssow-ship-it/Data_Mining_Project" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CERTIFICATIONS
+═══════════════════════════════ -->
+<section id="certifications">
+  <div class="section-label">05 / Certifications</div>
+  <h2 class="section-title">My <span>certifications</span></h2>
+  <div class="certif-grid">
+
+    <div class="certif-card reveal">
+      <div class="certif-badge nvidia">NVIDIA</div>
+      <div class="certif-body">
+        <div class="certif-issuer">NVIDIA Deep Learning Institute</div>
+        <h3>Getting Started with Deep Learning</h3>
+        <div class="certif-date">📅 January 2026 · ID: jvkX03ltRnqkxUDena4Ymg</div>
+        <a href="https://learn.nvidia.com/certificates?id=jvkX03ltRnqkxUDena4Ymg" target="_blank" class="certif-link">Verify →</a>
+      </div>
+    </div>
+
+    <div class="certif-card reveal">
+      <div class="certif-badge coursera">Coursera</div>
+      <div class="certif-body">
+        <div class="certif-issuer">DeepLearning.AI · Stanford University</div>
+        <h3>Unsupervised Learning, Recommenders, Reinforcement Learning</h3>
+        <div class="certif-date">📅 December 2025 · ID: W39OQK6N8YLO</div>
+        <a href="https://coursera.org/verify/W39OQK6N8YLO" target="_blank" class="certif-link">Verify →</a>
+      </div>
+    </div>
+
+    <div class="certif-card reveal">
+      <div class="certif-badge coursera">Coursera</div>
+      <div class="certif-body">
+        <div class="certif-issuer">DeepLearning.AI · Stanford University</div>
+        <h3>Advanced Learning Algorithms</h3>
+        <div class="certif-date">📅 December 2025 · ID: NMSOAXJ6BMA8</div>
+        <a href="https://coursera.org/verify/NMSOAXJ6BMA8" target="_blank" class="certif-link">Verify →</a>
+      </div>
+    </div>
+
+    <div class="certif-card reveal">
+      <div class="certif-badge coursera">Coursera</div>
+      <div class="certif-body">
+        <div class="certif-issuer">DeepLearning.AI · Stanford University</div>
+        <h3>Supervised Machine Learning: Regression and Classification</h3>
+        <div class="certif-date">📅 December 2025 · ID: CYDZGRPRD4TT</div>
+        <a href="https://coursera.org/verify/CYDZGRPRD4TT" target="_blank" class="certif-link">Verify →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CONTACT
+═══════════════════════════════ -->
+<section id="contact">
+  <div class="section-label" style="text-align:center">06 / Contact</div>
+  <h2 class="section-title reveal" style="text-align:center">Let's work <span>together</span></h2>
+  <div class="contact-inner">
+    <p class="reveal">
+      Open to internship, research collaboration or job opportunities in Data Science & Deep Learning.
+      Feel free to reach out!
+    </p>
+    <div class="contact-links reveal">
+      <a href="mailto:ahmed.s.sow@aims-senegal.org" class="contact-link">✉️ Email</a>
+      <a href="https://www.linkedin.com/in/ahmed-souleymane-sow" target="_blank" class="contact-link">💼 LinkedIn</a>
+      <a href="https://github.com/ahmedssow-ship-it" target="_blank" class="contact-link">🐙 GitHub</a>
+      <a href="https://www.kaggle.com/ahmedsouleymanesow" target="_blank" class="contact-link">📊 Kaggle</a>
+      <a href="tel:+221781232673" class="contact-link">📞 +221 78 123 26 73</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ahmed Souleymane SOW · Master Data Science · AIMS Senegal
+</footer>
+
+<!-- Script -->
+<script src="js/main.js"></script>
+</body>
+</html>
