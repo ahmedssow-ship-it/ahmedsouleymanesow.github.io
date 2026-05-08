@@ -15,7 +15,7 @@ I am particularly interested in **NLP for low-resource African languages** (Wolo
 ---
 
 ## 🛠️ Built with
-- HTML5 / CSS / JavaScript
+- HTML / CSS / JavaScript
 - No framework — pure code
 
 ---
