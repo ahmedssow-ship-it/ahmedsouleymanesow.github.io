@@ -3,7 +3,7 @@
 > Master's student in Data Science at AIMS-Senegal | Aspiring NLP Researcher
 
 ## 🔗 Live site
-👉 **[ahmed-souleymane-sow.github.io](https://ahmed-souleymane-sow.github.io)**
+👉 **[https://github.com/ahmedssow-ship-it/ahmedsouleymanesow.github.io]([https://ahmed-souleymane-sow.github.io](https://github.com/ahmedssow-ship-it/ahmedsouleymanesow.github.io)**
 
 ---
 
